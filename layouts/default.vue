@@ -50,6 +50,11 @@
       </v-btn>
       <v-toolbar-title v-text="title" />
       <v-spacer />
+      <v-tabs>
+        <v-tab>アイテム1</v-tab>
+        <v-tab>アイテム2</v-tab>
+        <v-tab>アイテム3</v-tab>
+      </v-tabs>
       <v-btn
         icon
         @click.stop="rightDrawer = !rightDrawer"
@@ -87,6 +92,15 @@
     </v-footer>
   </v-app>
 </template>
+
+<!-- ここから修正 -->
+<style lang="scss" scoped>
+.v-toolbar__title {
+  overflow: visible !important;
+  margin-right: 50px !important;
+}
+</style>
+<!-- ここまで修正 -->
 
 <script>
 export default {
