@@ -51,9 +51,12 @@
       <v-toolbar-title v-text="title" />
       <v-spacer />
       <v-tabs>
-        <v-tab>アイテム1</v-tab>
-        <v-tab>アイテム2</v-tab>
-        <v-tab>アイテム3</v-tab>
+        <v-tab
+          v-for="(item, i) in items"
+          :key="i"
+        >
+          {{ item.title }}
+        </v-tab>
       </v-tabs>
       <v-btn
         icon
@@ -110,6 +113,11 @@ export default {
       drawer: false,
       fixed: false,
       items: [
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'Abaut',
+          to: '/abaut'
+        },
         {
           icon: 'mdi-apps',
           title: 'Welcome',
