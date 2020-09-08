@@ -119,6 +119,11 @@ export default {
           to: '/abaut'
         },
         {
+          icon: 'mdi-chart-bubble',
+          title: 'Home',
+          to: '/home'
+        },
+        {
           icon: 'mdi-apps',
           title: 'Welcome',
           to: '/'
